@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="好好学习，天天向上！" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <title>🌈 myp' blog</title>
+  <!-- 主题 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
+  <!-- icon -->
+  <link rel="icon" href="./_resources/icon.svg" type="image/x-icon" />
+  <!-- 字体图标 -->
+  <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- 收藏夹显示图标 -->
+  <link rel="shortcut icon" href="./_resources/icon.svg" type="image/x-icon" />
+  <!-- 自定义样式 -->
+  <!-- <link rel="stylesheet" href="./_resources/style.css" type="text/css" /> -->
+  <style>
+    body {
+      font-size: 105%;
+      line-height: 1.8rem;
+    }
+
+    .markdown-section ol,
+    .markdown-section p,
+    .markdown-section ul {
+      line-height: 1.8rem;
+    }
+
+    /* 内容居中和宽度 */
+    .content {
+      margin: 0 auto;
+      max-width: 1150px;
+    }
+
+    code {
+      font-size: 1.05rem !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 初始化时会显示 Loading... 内容 -->
+  <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
+
+  <script>
+    window.$docsify = {
+      name: "🌈 myp' blog",
+      nameLink: 'https://myyppp.github.io/',
+      repo: 'https://github.com/myyppp/myyppp.github.io', // github 挂件
+      coverpage: true, // 封面页 _coverpage.md
+      loadNavbar: true, // 配置导航栏 _navbar.md
+      mergeNavbar: true, // Navbar 将在小屏幕上与侧边栏合并
+      maxLevel: 4, // 最大的标题层数
+
+      auto2top: false, // 切换页面后是否自动跳转到页面顶部
+      externalLinkTarget: '_blank', // 外链打开方式，_blank表示在新标签页中打开
+      onlyCover: false, // 只在访问主页时加载封面
+
+      // basePath: '/path/', // 文档加载的根路径
+      relativePath: true, // 启用相对路径
+
+      search: { // 添加搜索框
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😒 找不到结果',
+        depth: 6, // 搜索标题的最大层级, 1 - 6
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },
+
+      copyCode: { // 复制代码
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'OK'
+      },
+
+      footer: { // 添加页脚
+        copy: '<span>Copyright &copy; 2021 - 至今</span>',
+        auth: "<a href='https://myyppp.github.io/' target='_blank'>🌈 myp' blog</a>",
+        style: 'text-align: center;',
+      },
+
+    }
+  </script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
+  <!-- 搜索框 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+
+  <!-- 复制代码 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+
+  <!-- 添加页脚 -->
+  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+
+  <!-- 美化Markdown引用样式 -->
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+
+  <!-- 代码高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-go.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-powershell.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-docker.min.js"></script>
+
+  <!-- PWA 离线化 -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('./_resources/pwa.js')
+    }
+  </script>
+
+  <!-- 回到顶部 -->
+  <!-- https://github.com/zhengxiangqi/docsify-scroll-to-top -->
+  <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
+
+  <!-- 底部导航 -->
+  <!-- https://github.com/imyelo/docsify-pagination -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script> -->
+
+  <!-- 看板娘 -->
+  <!-- <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script> -->
+  <!-- <script src="./_resources/model.js"></script> -->
+
+</body>
+
+</html>
